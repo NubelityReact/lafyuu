@@ -3,5 +3,13 @@
   border-radius: 1.5rem;
   padding: 0.8rem 2rem;
   border: 1px solid transparent;
+}
+
+.primary {
   background-color: var(--blue);
+}
+
+.large {
+  padding: 0.8rem 2rem;
+  outline: none;
 }
