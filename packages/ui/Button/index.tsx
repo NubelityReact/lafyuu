@@ -1,28 +1,57 @@
 import * as React from "react";
-import "./button.styles.module.css";
+import styles from "./button.styles.module.scss";
 import clsx from "clsx";
+import Typography from "../Typography";
 
-export interface IButtonProps {
-  children: React.ReactNode;
-  text?: string;
-  variant: "primary" | "secondary";
-  size: "small" | "large";
-  icon?: string;
-}
+export type IButtonProps =
+  | {
+      children?: never;
+      text: string;
+      variant: "primary" | "secondary";
+      size?: "small" | "large";
+      icon?: string;
+    }
+  | {
+      children: React.ReactNode;
+      text?: never;
+      variant: "primary" | "secondary";
+      size?: "small" | "large";
+      icon?: string;
+    };
 
-export const Button: React.FC<IButtonProps> = (props) => {
-  const { children, size, variant, icon, text, ...rest } = props;
+export const Button: React.FC<
+  IButtonProps & React.HTMLAttributes<HTMLButtonElement>
+> = (props) => {
+  const {
+    children,
+    size = "small",
+    variant,
+    icon,
+    text,
+    className,
+    ...rest
+  } = props;
   return (
     <button
-      className={clsx(size === "large" ? "large" : "small", variant)}
+      className={clsx(
+        styles.button,
+        size === "large" && styles.large,
+        styles[variant],
+        className
+      )}
       {...rest}
     >
       {icon && (
-        <picture>
+        <picture
+          className={clsx(
+            styles.picture,
+            size === "large" && styles.pictureLarge
+          )}
+        >
           <img src={icon} alt="" />
         </picture>
       )}
-      <span>{text ?? children}</span>
+      <Typography>{text ?? children}</Typography>
     </button>
   );
 };
