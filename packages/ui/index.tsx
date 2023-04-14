@@ -1,3 +1,6 @@
-import * as React from "react";
-import "./globals.scss";
-export * from "./Button";
+import * as React from "react"
+import "./globals.scss"
+export * from "./Button"
+export * from "./Input"
+export * from "./Textarea"
+export * from "./Select"
