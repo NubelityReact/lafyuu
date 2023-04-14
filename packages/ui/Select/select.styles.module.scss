@@ -1,0 +1,37 @@
+.select {
+  width: min-content;
+  position: relative;
+  margin-bottom: 1rem;
+
+  select {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--neutral-grey);
+    padding: 1.3rem 1.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--neutral-light);
+    width: 34rem;
+    background-color: #ffffff;
+    appearance: none;
+
+    &::placeholder {
+      font-weight: normal;
+    }
+
+    &:focus {
+      border-color: var(--primary-blue);
+    }
+
+    &:invalid {
+      border-color: var(--primary-red) !important;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.2rem;
+}
