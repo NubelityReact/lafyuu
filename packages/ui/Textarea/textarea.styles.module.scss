@@ -1,0 +1,30 @@
+.textarea {
+  width: min-content;
+  position: relative;
+  margin-bottom: 1rem;
+
+  textarea {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--neutral-grey);
+    padding: 1.3rem 1.6rem;
+    border-radius: 5px;
+    border: 1px solid var(--neutral-light);
+    width: 34rem;
+    height: 16rem;
+
+    &::placeholder {
+      font-weight: normal;
+    }
+
+    &:focus {
+      border-color: var(--primary-blue);
+    }
+
+    &:invalid {
+      border-color: var(--primary-red) !important;
+    }
+  }
+}
