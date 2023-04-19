@@ -27,7 +27,17 @@
     &:invalid {
       border-color: var(--primary-red) !important;
     }
+
+    background-image: url(../src/images/select-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: calc(34rem - 3rem) center;
   }
+}
+
+.option {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .icon {

@@ -1,6 +1,21 @@
 import { Button, Input, Textarea, Select } from "ui"
 
 export default function Web() {
+  const selectItems = [
+    {
+      text: "Option 1",
+      value: "option-1",
+    },
+    {
+      text: "Option 2",
+      value: "option-2",
+    },
+    {
+      text: "Option 3",
+      value: "option-3",
+    },
+  ]
+
   return (
     <div>
       <h1>Web</h1>
@@ -33,7 +48,8 @@ export default function Web() {
           errorLabel="* Your Cupon Is Not Correct "
         />
         <Textarea name="textarea" placeholder="Write your review here" />
-        <Select name="select" />
+        <Select name="select" items={selectItems} />
+        <Input name="name" placeholder="Enter Cupon Code" type="date" />
       </div>
     </div>
   )

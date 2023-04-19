@@ -9,7 +9,7 @@ export type IInputProps =
       name: string
       variant?: "default"
       icon?: tIcon
-      type?: "text" | "password" | "email" | "number"
+      type?: "text" | "password" | "email" | "number" | "date"
       error?: boolean
       errorLabel?: string
     }
